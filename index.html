@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Web Soft</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/importancia.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/aniimação-section.css">
+    <link rel="stylesheet" href="css/styles-form.css">
+</head>
+
+<body class="bg-white text-black font-sans">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white shadow-md fixed w-full z-50">
+            <div class="container mx-auto flex justify-between items-center py-4 px-6">
+                <!-- Logo e Nome da Empresa -->
+                <div class="flex items-center space-x-4">
+                    <img src="imagens/logo-sem-fundo.png" alt="Logo Agência Web Soft" class="h-12">
+                </div>
+
+                <!-- Menu de Navegação -->
+                <nav class="hidden md:flex space-x-6 items-center">
+                    <a href="#servicos" class="hover:text-blue-600">Serviços</a>
+                    <a href="#sobre" class="hover:text-blue-600">Sobre Nós</a>
+                    <a href="#portfolio" class="hover:text-blue-600">Portfólio</a>
+                    <a href="#feedback" class="hover:text-blue-600">Feedback</a>
+                    <a href="#contato" class="hover:text-blue-600">Contato</a>
+                    <a href="#contato"
+                        class="bg-blue-600 text-white py-2 px-6 rounded-full font-medium hover:bg-blue-700">Solicitar
+                        Orçamento</a>
+                </nav>
+
+                <!-- Botão Mobile -->
+                <button class="md:hidden" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Mobile -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+                <a href="#servicos" class="block py-2 px-4 hover:bg-gray-100">Serviços</a>
+                <a href="#sobre" class="block py-2 px-4 hover:bg-gray-100">Sobre Nós</a>
+                <a href="#portfolio" class="block py-2 px-4 hover:bg-gray-100">Portfólio</a>
+                <a href="#feedback" class="block py-2 px-4 hover:bg-gray-100">Feedback</a>
+                <a href="#contato" class="block py-2 px-4 hover:bg-gray-100">Contato</a>
+            </div>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main class="flex-grow pb-8">
+            <!-- Hero Section -->
+            <section class="h-screen flex items-center justify-center bg-blue-600 text-white relative">
+                <div class="text-center">
+                    <!-- Logo -->
+                    <div id="logo-hero">
+                        <img src="imagens/logo-redonda.png" alt="Logo Agência Web Soft" class="h-24 mx-auto">
+                    </div>
+                    <!-- Frase -->
+                    <div id="animated-text" class="text-5xl md:text-6xl font-bold mb-4 hidden">
+                        Web Soft 🚀
+                    </div>
+                    <p class="text-xl mb-8">Desenvolvimento web e software personalizados para o seu negócio.</p>
+                    <a href="#servicos"
+                        class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50">Conheça
+                        nossos
+                        serviços</a>
+                </div>
+                <div class="absolute bottom-0 left-0 w-full h-20 bg-white transform skew-y-2"></div>
+            </section>
+
+            <!-- Importância de um Site -->
+            <section class="section-container py-24 bg-gradient-to-b from-gray-50 to-gray-100">
+                <div class="blob-bg">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#4f46e5"
+                            d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,88.5,-1.5C87,13.3,81.4,26.6,73.6,38.6C65.8,50.6,55.9,61.3,43.7,69.7C31.4,78.1,15.7,84.2,0.4,83.5C-14.9,82.9,-29.8,75.5,-42.2,66.5C-54.5,57.4,-64.3,46.7,-70.9,34.1C-77.5,21.4,-80.8,6.8,-79.6,-7.2C-78.3,-21.2,-72.5,-34.5,-63.5,-43.9C-54.5,-53.3,-42.3,-58.9,-30.5,-67.1C-18.7,-75.4,-7.3,-86.4,4.4,-93.8C16,-101.1,32.1,-104.8,44.7,-97.3C57.3,-89.9,69.9,-71.3,75.8,-56.3C81.7,-41.3,81.1,-29.9,80,-18.7C78.9,-7.5,77.4,3.5,75.1,14.2C72.9,24.9,70,35.3,65.1,46.2C60.1,57.1,53.2,68.5,43.3,73.4C33.5,78.3,20.7,76.7,8.6,75.4C-3.5,74.1,-15.1,73.1,-24.5,68.3C-34,63.4,-41.3,54.6,-49.3,46.3C-57.3,38,-66,30.2,-69.5,20.5C-73.1,10.9,-71.4,-0.5,-67.6,-10.5C-63.8,-20.5,-57.9,-29.1,-51.3,-37.9C-44.7,-46.7,-37.3,-55.8,-27.9,-64.6C-18.5,-73.4,-7.1,-82.1,3.7,-83.8C14.5,-85.6,28.5,-80.4,42.1,-74.4Z"
+                            transform="translate(100 100)" />
+                    </svg>
+                </div>
+
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                            Por que ter um <span class="highlight">site</span> é essencial para o seu negócio?
+                        </h2>
+                        <div class="w-24 h-1 bg-indigo-600 mx-auto mb-8"></div>
+                        <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                            Um site é a vitrine digital da sua empresa. Ele permite que você alcance clientes em
+                            qualquer lugar,
+                            aumente sua credibilidade e impulsione suas vendas.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                        <div class="benefit-card bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <div
+                                class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Alcance Global</h3>
+                            <p class="text-gray-600">Chegue a clientes em qualquer lugar do mundo, expandindo suas
+                                oportunidades de negócio além das fronteiras físicas.</p>
+                        </div>
+
+                        <div class="benefit-card bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <div
+                                class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Credibilidade</h3>
+                            <p class="text-gray-600">Um site profissional fortalece sua marca e aumenta a confiança dos
+                                clientes em seu negócio.</p>
+                        </div>
+
+                        <div class="benefit-card bg-white rounded-lg shadow-lg p-8 text-center" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <div
+                                class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-600" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Aumento de Vendas</h3>
+                            <p class="text-gray-600">Transforme visitantes em clientes com uma presença online
+                                estratégica que trabalha por você 24 horas por dia.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#contato"
+                            class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                            Quero um site profissional
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Serviços Section -->
+            <section id="servicos" class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 animated-element">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossos Serviços</h2>
+                        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                        <p class="text-gray-700 max-w-3xl mx-auto">
+                            Oferecemos soluções completas para transformar sua presença digital e impulsionar seus
+                            resultados
+                            online.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Service 1 -->
+                        <div
+                            class="service-card bg-white rounded-lg shadow-lg p-8 animated-element transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                            <div class="bg-blue-600 bg-opacity-10 p-4 rounded-full inline-block mb-6">
+                                <i class="fas fa-laptop-code text-3xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Desenvolvimento Web</h3>
+                            <p class="text-gray-700 mb-6">
+                                Criamos sites modernos, responsivos e otimizados para todos os dispositivos, priorizando
+                                a
+                                experiência do usuário e a performance.
+                            </p>
+                            <ul class="text-gray-700 space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Sites Institucionais
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    E-commerce
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Landing Pages
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Blog
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Service 2 -->
+                        <div
+                            class="service-card bg-white rounded-lg shadow-lg p-8 animated-element transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                            <div class="bg-blue-600 bg-opacity-10 p-4 rounded-full inline-block mb-6">
+                                <i class="fas fa-mobile-alt text-3xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Software Personalizado</h3>
+                            <p class="text-gray-700 mb-6">
+                                Desenvolvemos sistemas sob medida para atender às necessidades específicas do seu
+                                negócio,
+                                automatizando processos e melhorando a eficiência.
+                            </p>
+                            <ul class="text-gray-700 space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Sistemas de Gestão
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Aplicativos Web
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Integração de APIs
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Criação e Integração de Sistemas para Portais de Transparência
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div
+                            class="service-card bg-white rounded-lg shadow-lg p-8 animated-element transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                            <div class="bg-blue-600 bg-opacity-10 p-4 rounded-full inline-block mb-6">
+                                <i class="fas fa-code text-3xl text-blue-600"></i> <!-- Ícone alterado para "code" -->
+                            </div>
+                            <h3 class="text-xl font-bold mb-4">Chat Automatizado</h3>
+                            <p class="text-gray-700 mb-6">
+                                Soluções avançadas para integrar sistemas e criar chats automatizados com toque
+                                humanizado, melhorando a
+                                experiência do cliente e a eficiência operacional.
+                            </p>
+                            <ul class="text-gray-700 space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Integração de APIs personalizadas
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Chatbots inteligentes e humanizados
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Automação de atendimento ao cliente
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-chevron-right text-blue-600 mr-2"></i>
+                                    Suporte multicanal
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sobre Nós Section -->
+            <section id="sobre" class="py-20 bg-gray-100">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2">
+                            <img src="imagens/logo-icone-redonda.png" alt="Sobre Nós" class="rounded-lg shadow-lg">
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 animated-element">
+                            <h3 class="text-2xl font-bold mb-6 text-blue-600">Nossa História</h3>
+                            <p class="text-gray-700 mb-6">
+                                A Agência Web Soft nasceu da paixão por criar soluções digitais inovadoras que realmente
+                                fazem a
+                                diferença. Com uma equipe de profissionais talentosos e experientes, estamos
+                                comprometidos em
+                                oferecer o melhor em desenvolvimento web e estratégias digitais.
+                            </p>
+                            <p class="text-gray-700 mb-6">
+                                Nossa missão é transformar a presença digital dos nossos clientes, criando experiências
+                                únicas e
+                                memoráveis que conectam marcas ao seu público de forma eficiente e impactante.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-6 mt-8">
+                                <div class="flex items-center">
+                                    <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                        <i class="fas fa-check text-white"></i>
+                                    </div>
+                                    <span class="font-medium">Inovação</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                        <i class="fas fa-check text-white"></i>
+                                    </div>
+                                    <span class="font-medium">Qualidade</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                        <i class="fas fa-check text-white"></i>
+                                    </div>
+                                    <span class="font-medium">Compromisso</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-blue-600 p-3 rounded-full mr-4">
+                                        <i class="fas fa-check text-white"></i>
+                                    </div>
+                                    <span class="font-medium">Resultados</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfólio Section -->
+            <!-- <section id="portfolio" class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center mb-12">Portfólio</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <div
+                            class="bg-white p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                            <img src="assets/images/project1.jpg" alt="Projeto 1"
+                                class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-4">Projeto 1</h3>
+                            <p class="text-gray-700">Descrição do projeto 1.</p>
+                        </div>
+
+                        
+                        <div
+                            class="bg-white p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                            <img src="assets/images/project2.jpg" alt="Projeto 2"
+                                class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-4">Projeto 2</h3>
+                            <p class="text-gray-700">Descrição do projeto 2.</p>
+                        </div>
+
+                        
+                        <div
+                            class="bg-white p-6 rounded-lg shadow-lg text-center transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                            <img src="assets/images/project3.jpg" alt="Projeto 3"
+                                class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-bold mb-4">Projeto 3</h3>
+                            <p class="text-gray-700">Descrição do projeto 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- Feedback Section -->
+            <!-- <section id="feedback" class="py-20 bg-gray-100">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center mb-12">Feedback dos Clientes</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                            <p class="text-gray-700 mb-6">"A Agência Web Soft transformou nosso site em uma máquina de
+                                vendas.
+                                Recomendo!"</p>
+                            <p class="text-blue-600 font-bold">- Cliente Satisfeito</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                            <p class="text-gray-700 mb-6">"Profissionais incríveis! Entregaram tudo no prazo e com
+                                qualidade."
+                            </p>
+                            <p class="text-blue-600 font-bold">- Outro Cliente</p>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- Contato Section -->
+            <section id="contato" class="py-24 bg-gradient-to-br from-white to-blue-50">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 transition-all duration-700 transform hover:scale-105">
+                        <h2 class="text-4xl font-bold mb-4 text-blue-700">Entre em Contato</h2>
+                        <p class="text-gray-600 max-w-2xl mx-auto">Estamos ansiosos para ouvir você. Preencha o
+                            formulário abaixo ou use nossas redes sociais para se conectar conosco.</p>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
+                        <!-- Formulário de Contato -->
+                        <div
+                            class="w-full lg:w-2/3 bg-white p-8 rounded-2xl shadow-lg transform transition-all duration-500 hover:shadow-xl">
+                            <form class="space-y-6" action="https://formspree.io/f/mqaeqryb" method="POST">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- Campo Nome -->
+                                    <div class="group">
+                                        <label for="nome"
+                                            class="block text-gray-700 font-medium mb-2 transition-colors group-hover:text-blue-600">
+                                            Seu Nome
+                                        </label>
+                                        <div class="relative overflow-hidden rounded-lg">
+                                            <input type="text" id="nome" name="nome"
+                                                placeholder="Digite seu nome completo"
+                                                class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition-all">
+                                            <span
+                                                class="absolute left-0 bottom-0 h-1 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                                            <i
+                                                class="fas fa-user absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 transition-colors group-hover:text-blue-600"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- Campo Email -->
+                                    <div class="group">
+                                        <label for="email"
+                                            class="block text-gray-700 font-medium mb-2 transition-colors group-hover:text-blue-600">
+                                            Seu Email
+                                        </label>
+                                        <div class="relative overflow-hidden rounded-lg">
+                                            <input type="email" id="email" name="email"
+                                                placeholder="Digite seu melhor email"
+                                                class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition-all">
+                                            <span
+                                                class="absolute left-0 bottom-0 h-1 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                                            <i
+                                                class="fas fa-envelope absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 transition-colors group-hover:text-blue-600"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Campo Telefone -->
+                                <div class="group">
+                                    <label for="telefone"
+                                        class="block text-gray-700 font-medium mb-2 transition-colors group-hover:text-blue-600">
+                                        Seu Telefone
+                                    </label>
+                                    <div class="relative overflow-hidden rounded-lg">
+                                        <input type="tel" id="telefone" name="telefone"
+                                            placeholder="Digite seu número de telefone"
+                                            class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition-all">
+                                        <span
+                                            class="absolute left-0 bottom-0 h-1 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                                        <i
+                                            class="fas fa-phone absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 transition-colors group-hover:text-blue-600"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Campo Assunto -->
+                                <div class="group">
+                                    <label for="assunto"
+                                        class="block text-gray-700 font-medium mb-2 transition-colors group-hover:text-blue-600">
+                                        Assunto
+                                    </label>
+                                    <div class="relative overflow-hidden rounded-lg">
+                                        <select id="assunto" name="assunto"
+                                            class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition-all appearance-none">
+                                            <option value="" disabled selected>Selecione um assunto</option>
+                                            <option value="informacoes">Solicitar Informações</option>
+                                            <option value="orcamento">Solicitar Orçamento</option>
+                                            <option value="suporte">Suporte Técnico</option>
+                                            <option value="outro">Outro Assunto</option>
+                                        </select>
+                                        <span
+                                            class="absolute left-0 bottom-0 h-1 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                                        <i
+                                            class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 transition-colors group-hover:text-blue-600"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Campo Mensagem -->
+                                <div class="group">
+                                    <label for="mensagem"
+                                        class="block text-gray-700 font-medium mb-2 transition-colors group-hover:text-blue-600">
+                                        Sua Mensagem
+                                    </label>
+                                    <div class="relative overflow-hidden rounded-lg">
+                                        <textarea id="mensagem" name="message"
+                                            placeholder="Digite sua mensagem detalhada aqui..."
+                                            class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition-all"
+                                            rows="5"></textarea>
+                                        <span
+                                            class="absolute left-0 bottom-0 h-1 w-0 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                                        <i
+                                            class="fas fa-comment absolute right-4 top-6 text-gray-400 transition-colors group-hover:text-blue-600"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Checkbox de Privacidade -->
+                                <div class="flex items-start space-x-3">
+                                    <input type="checkbox" id="privacidade" name="privacidade" required
+                                        class="mt-1 h-5 w-5 text-blue-600 transition duration-150 ease-in-out">
+                                    <label for="privacidade" class="text-gray-600 text-sm">
+                                        Concordo com a <a href="#" class="text-blue-600 hover:underline">Política de
+                                            Privacidade</a> e autorizo o contato por email ou telefone.
+                                    </label>
+                                </div>
+
+                                <!-- Botão de Enviar -->
+                                <div class="text-center pt-4">
+                                    <button type="submit"
+                                        class="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-xl font-bold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                                        <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Informações de Contato e Redes Sociais -->
+                        <div class="w-full lg:w-1/3">
+                            <div class="bg-blue-700 text-white p-8 rounded-2xl shadow-lg h-full">
+                                <h3 class="text-2xl font-bold mb-8">Informações de Contato</h3>
+
+                                 <div class="space-y-6">
+                                    <!-- Endereço -->
+                                    <!-- <div
+                                        class="flex items-start space-x-4 transform transition-all duration-300 hover:translate-x-2">
+                                        <div class="bg-blue-600 p-3 rounded-full">
+                                            <i class="fas fa-map-marker-alt text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Endereço</h4>
+                                            <p class="text-blue-100 mt-1">Av. Principal, 1234 - Sala 56<br>Bairro,
+                                                Cidade - UF</p>
+                                        </div>
+                                    </div>  -->
+
+                                    <!-- Email -->
+                                    <div
+                                        class="flex items-start space-x-4 transform transition-all duration-300 hover:translate-x-2">
+                                        <div class="bg-blue-600 p-3 rounded-full">
+                                            <i class="fas fa-envelope text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Email</h4>
+                                            <a href="mailto:contato@empresa.com"
+                                                class="text-blue-100 mt-1 hover:text-white transition-colors">agenciawebsoft.br@gmail.com</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Telefone -->
+                                    <div
+                                        class="flex items-start space-x-4 transform transition-all duration-300 hover:translate-x-2">
+                                        <div class="bg-blue-600 p-3 rounded-full">
+                                            <i class="fas fa-phone text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Telefone</h4>
+                                            <a href="tel:+5511999999999"
+                                                class="text-blue-100 mt-1 hover:text-white transition-colors">(99)
+                                                98422-7040</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Redes Sociais -->
+                                <div class="mt-12">
+                                    <h4 class="font-bold text-xl mb-6">Conecte-se conosco nas redes sociais</h4>
+                                    <div class="flex space-x-4">
+                                        <!-- Instagram -->
+                                        <a href="https://www.instagram.com/seuinstagram" target="_blank"
+                                            class="bg-blue-800 hover:bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:rotate-6">
+                                            <i class="fab fa-instagram text-xl"></i>
+                                        </a>
+
+                                        <!-- Facebook -->
+                                        <a href="https://www.facebook.com/seufacebook" target="_blank"
+                                            class="bg-blue-800 hover:bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:rotate-6">
+                                            <i class="fab fa-facebook-f text-xl"></i>
+                                        </a>
+
+                                        <!-- WhatsApp -->
+                                        <a href="https://wa.me/5599984227040" target="_blank"
+                                            class="bg-blue-800 hover:bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:rotate-6">
+                                            <i class="fab fa-whatsapp text-xl"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa ou Horário de Funcionamento (Opcional) -->
+                    <div
+                        class="mt-16 max-w-6xl mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all duration-500 hover:shadow-xl">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-6 text-center">Horário de Atendimento</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="transition-all duration-300 transform hover:scale-105">
+                                <h4 class="font-bold text-lg border-b-2 border-blue-200 pb-2 mb-4">Atendimento Online
+                                </h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex justify-between"><span>Segunda - Sexta:</span> <span>8:00 -
+                                            18:00</span></li>
+                                    <li class="flex justify-between"><span>Sábado:</span> <span>8:00 - 13:00</span></li>
+                                    <li class="flex justify-between"><span>Domingo:</span> <span>Fechado</span></li>
+                                </ul>
+                            </div>
+                            <div class="transition-all duration-300 transform hover:scale-105">
+                                <h4 class="font-bold text-lg border-b-2 border-blue-200 pb-2 mb-4">Atendimento
+                                    Presencial</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex justify-between"><span>Segunda - Sexta:</span> <span>8:00 -
+                                            17:00</span></li>
+                                    <li class="flex justify-between"><span>Sábado:</span> <span>Com agendamento</span>
+                                    </li>
+                                    <li class="flex justify-between"><span>Domingo:</span> <span>Fechado</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-black text-white py-6 w-full">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-xs sm:text-sm md:text-base">&copy; 2025 Agência Web Soft. Todos os direitos reservados.
+                </p>
+            </div>
+        </footer>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/animação-logo.js"></script>
+        <script src="js/validaçao-form.js"></script>
+        <script src="js/importacia.js"></script>
+</body>
+
+</html>

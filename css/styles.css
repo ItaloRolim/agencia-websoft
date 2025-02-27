@@ -1,0 +1,14 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom CSS */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#animated-text {
+    transition: opacity 0.5s ease;
+}
+

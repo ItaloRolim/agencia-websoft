@@ -1,0 +1,9 @@
+/* Estilos personalizados para o formulário */
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Efeito de foco suave */
+}
+
+/* Ícones dentro dos campos */
+.fa-user, .fa-envelope, .fa-comment {
+    pointer-events: none; /* Impede que o ícone interfira no clique no campo */
+}

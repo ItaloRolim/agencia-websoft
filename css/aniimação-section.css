@@ -1,0 +1,9 @@
+/* Estilos personalizados para os cards de serviços */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.07); /* Aumenta o tamanho do card em 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra mais pronunciada */
+}
